@@ -1,0 +1,2 @@
+[{deps, [{"rabbitmq-server", []}]},
+ {build_command, "make BROKER_DIR=`erl -eval 'io:format(\"~s~n\", [re:replace(code:which(rabbit), \"/ebin/rabbit.beam\", \"\", [{return, list}])])' -noinput -s init stop`"}].
